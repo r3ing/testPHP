@@ -42,23 +42,23 @@
 		$texto = "     sdfdsf sdfdsfdsf  sdsdfdsfdsf    ";
 		echo trim($texto);
 		echo '<br>';
-		echo $texto;
 		echo '<br>';
 		$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		echo '<a href="' . $actual_link . '">Volver</a>';
 
 
+	rename("newFolderTest","newFolderTest12345");
 
-		if(1==1){
+	echo '<br>';
+	echo '<br>';
+	$texto = "aaaa:sss:ddddd:ffffff:gggggg";
 
-			if(file_exists("js/1.js"))
-				return;
+	$valor_explode = explode(":", $texto);
 
-			echo "11111111111111";
-
-		}else{
-			echo "0000000000000";
-		}
+	foreach ($valor_explode as $valor) {
+		echo $valor;
+		echo '<br>';
+	}
 
 	?>
 </body>
