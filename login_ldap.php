@@ -2,7 +2,7 @@
 
 // ejemplo de autenticación
 $ldaprdn  = 'RIPLEY-MAIN\agutierrezv';
-$ldappass = 'Amparo16';
+$ldappass = 'Amparo17';
 
 // conexión al servidor LDAP
 $ldapconn = ldap_connect("w782p.ripley.local")
