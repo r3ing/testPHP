@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Arrastrar y soltar un elemento por la pantalla con JavaScript</title>
 	<style>
-	#arrastrar {
+	.arrastrar {
 		text-align:center;
 		width:100px;
 		height:100px;
@@ -18,7 +18,9 @@
 </head>
 <body>
 	<h1>Arrastrar y soltar un elemento por la pantalla con JavaScript</h1>
-	<div id="arrastrar" style="left:0;top:0;">Arrastrame por la pantalla!!</div>
+	<button onclick="move()">Go</button>
+	<div id="arrastrar" class="arrastrarte" style="left:0;top:0;">Arrastrame por la pantalla!!</div>
+	<div id="arrastrar1" class="arrastrarte" style="left:0;top:0;">Arrastrame por la pantalla!!</div>
 </body>
 </html>
  
@@ -74,5 +76,20 @@ movimiento=function(div)
 }
  
 // Inicializamos el movimiento del div con id "arrastrar"
-var recu1=new movimiento(document.getElementById("arrastrar"));
+function move() {
+
+	//div = document.getElementById("arrastrar")
+
+	var div = document.createElement('div');
+	div.id = "title";
+	div.className = 'card text-white mb-3 arrastrar';
+	div.style="width: 18rem;";
+
+	document.body.appendChild(div);
+
+
+	//div1 = document.getElementById("arrastrar1")
+	var recu1 = new movimiento(div);
+	//recu1 = new movimiento(div1);
+}
 </script>

@@ -557,6 +557,16 @@
                 {
                     extend:"csv",
                     className:"btn purple btn-outline "
+                },
+                {
+                    extend:"excelHtml5",
+                    customize: function( xlsx ) {
+                        var sheet = xlsx.xl.worksheets['excel_data.xml'];
+
+                        //$('row c[r^="C"]', sheet).attr( 's', '2' );
+                        $('c[r=A1] t', sheet).text( 'Custom text' );
+                    },
+                    className:"btn purple btn-outline "
                 }
             ],
             responsive:{
