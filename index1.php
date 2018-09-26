@@ -59,7 +59,30 @@
 		echo $valor;
 		echo '<br>';
 	}
+	echo '<br>';
+	echo '<br>';
+	?>
 
+
+	<?php
+	$hobbies = array("Acting", "Drawing", "Music", "Films", "Photography");
+
+	$string = "Acting_Drawing Music Films Photography";
+
+	for($i=0;$i<strlen($string);$i++){
+		if($string[$i] == '_'){
+			echo substr($string, $i+1);
+		}
+	}
+
+	// Deleting first array item
+	//$removed = array_shift($hobbies);
+	//echo array_shift($hobbies);
+	//echo array_splice($hobbies,0,1);
+	//print_r($hobbies);
+	//echo "<br>";
+	//echo implode($hobbies);
+	//var_dump($removed);
 	?>
 </body>
 </html>
